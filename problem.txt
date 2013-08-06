@@ -1,0 +1,6 @@
+Take csv file and read it into a database. 
+
+Once done display all the data into the database in a rails app
+
+
+

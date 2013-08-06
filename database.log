@@ -1,0 +1,24 @@
+D, [2013-08-06T17:26:06.247890 #10463] DEBUG -- :   [1m[36m (4.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+D, [2013-08-06T17:26:06.255482 #10463] DEBUG -- :   [1m[35m (3.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2013-08-06T17:26:06.260837 #10463] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:26:06.261099 #10463]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:26:22.549914 #10466] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:26:22.550207 #10466]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:27:02.323589 #10470] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:27:02.323863 #10470]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:28:08.652090 #10474] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:28:08.652365 #10474]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:32:59.981993 #10596] DEBUG -- :   [1m[36m (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+D, [2013-08-06T17:32:59.989257 #10596] DEBUG -- :   [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2013-08-06T17:33:00.001273 #10596] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:33:00.001539 #10596]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:33:39.299314 #10599] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:33:39.299605 #10599]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:35:20.790468 #10606] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:35:20.790741 #10606]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:36:03.478542 #10610] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-08-06T17:36:03.478807 #10610]  INFO -- : Migrating to CreatePeople (1)
+D, [2013-08-06T17:36:03.480139 #10610] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2013-08-06T17:36:03.488595 #10610] DEBUG -- :   [1m[36m (6.6ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "firstname" character varying(255) NOT NULL, "lastname" character varying(255) NOT NULL, "favorite_color" character varying(255) NOT NULL, "gender" character varying(255) NOT NULL) [0m
+D, [2013-08-06T17:36:03.505323 #10610] DEBUG -- :   [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "1"]]
+D, [2013-08-06T17:36:03.507017 #10610] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mCOMMIT[0m

@@ -1,0 +1,5 @@
+adapter: postgresql
+database: persons
+user: samuelmctaggart
+password: froman01
+host: 	localhost
