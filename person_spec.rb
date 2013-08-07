@@ -3,7 +3,13 @@ require 'factory_girl'
 require_relative "person.rb"
 
 describe 'People' do 
+
+	before :each do 
+		FactoryGirl.create(:people)
+	end
+
 	let(:test) { People.import_from_csv("persons.csv") }
+	let(:person) { FactoryGirl.create(:people) }
 
 	it "returns an array" do 
 		expect(test).to be_kind_of(Array)
@@ -11,19 +17,24 @@ describe 'People' do
 	end
 
 	it 'creates a person' do 
-		People.create_person(attrs)
-	end
-
-
-
-	def attrs
-		{ lastname: rand(1000).to_s,
-			firstname: rand_100.to_s,
-			gender: "male",
-			favoritecolor: "blue",
-			birthday: format_date(person[4])
-		}
+		prev_count = People.count
+		person
+		expect(People.count).to eql(prev_count + 1)
 	end
 end
+
+
+
+attributes = ["lastname", "firstname", "gender", "birthday", "favoritecolor"]
+
+FactoryGirl.define do 
+	factory :people do 
+		attributes.each do |attribute|
+			sequence(attribute.to_sym) {|n| "attr#{n}bute" } 
+		end
+	end
+end
+
+
 
 
