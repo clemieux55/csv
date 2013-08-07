@@ -1,0 +1,7 @@
+Postgres used with active record to write and read information
+
+Take in a csv file and transfers it into the database into the peoples table
+
+Dependencies pg, ActiveRecord 4.0.0, 
+
+test dependencies rspec, factorygirl
