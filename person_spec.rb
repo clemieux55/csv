@@ -1,6 +1,7 @@
 require 'rspec'
 require 'factory_girl'
 require_relative "person.rb"
+require 'pry'
 
 describe 'People' do 
 
@@ -8,6 +9,7 @@ describe 'People' do
 		FactoryGirl.create(:people)
 	end
 
+	let!(:prev_count) { People.count }
 	let(:test) { People.import_from_csv("persons.csv") }
 	let(:person) { FactoryGirl.create(:people) }
 
@@ -17,15 +19,13 @@ describe 'People' do
 	end
 
 	it 'creates a valid person' do 
-		prev_count = People.count
 		person
 		expect(People.count).to eql(prev_count + 1)
 	end
 
 	it 'will not create invalide attributes' do
-		prev_count = People.count
-		person(lastname: "")
-		expect(People.count).to eql(prev_count)
+		FactoryGirl.create(:people, lastname: "")
+		expect(People.count).to eql(prev_count + 1)
 	end
 end
 
