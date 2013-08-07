@@ -16,10 +16,16 @@ describe 'People' do
 		expect(test).to_not be(nil)
 	end
 
-	it 'creates a person' do 
+	it 'creates a valid person' do 
 		prev_count = People.count
 		person
 		expect(People.count).to eql(prev_count + 1)
+	end
+
+	it 'will not create invalide attributes' do
+		prev_count = People.count
+		person(lastname: "")
+		expect(People.count).to eql(prev_count)
 	end
 end
 
